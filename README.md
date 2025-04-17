@@ -27,19 +27,10 @@ NEURONS is a novel framework that emulates the human visual cortex to achieve hi
 
 ## 📣 Latest Updates
 
+&nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/04: Code released
 
+&nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/03: Project launched with paper available on arXiv
 
-<div style="display: flex; align-items: center;">
-    <img src="https://img.shields.io/badge/2025%2F04-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Code released</span>
-</div>
-
-<br>
-
-<div style="display: flex; align-items: center;">
-    <img src="https://img.shields.io/badge/2025%2F03-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Project launched with paper available on arXiv</span>
-</div>
 
 ## 🛠️ Installation & Setup
 
