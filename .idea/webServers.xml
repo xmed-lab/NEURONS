@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d918754c-0965-4db4-94f8-2cb8360c0c86" name="muxi45">
+        <fileTransfer rootFolder="/suanfs/usrhome/hnwang" accessType="SFTP" host="10.10.20.45" port="22" sshConfigId="4971e676-f680-4211-8b60-5640bc92dca3" sshConfig="metax@10.10.20.45:22">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="f7b682b9-737d-4c0c-b43d-78955be711ff" name="muxi60">
+        <fileTransfer rootFolder="/data/hnwang" accessType="SFTP" host="10.10.20.60" port="22" sshConfigId="77d9d8fe-2f00-4876-a5a7-0f85a25dc909" sshConfig="metax@10.10.20.60:22">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+
+output_dir: "EXP"
+pretrained_model_path: "runwayml/stable-diffusion-v1-5"
+
+
+num_train_epochs: 30
+#brain_model_train_epoch: 30
+#gradient_accumulation_steps: 1
+learning_rate: 1e-4
+lr_scheduler: "cosine"
+lr_warmup_epochs: 1
+train_batch_size: 120
+image_size: 224
+
+
+checkpointing_steps: 1000
+
+seed: 33
+mixed_precision: fp16
+use_8bit_adam: False
+gradient_checkpointing: False

@@ -1,0 +1,17 @@
+diffusers==0.23.0
+transformers==4.47.1
+imageio==2.27.0
+imageio-ffmpeg==0.4.9
+decord==0.6.0
+omegaconf==2.3.0
+gradio==3.36.1
+safetensors
+einops
+wandb
+dalle2-pytorch==1.15.6
+clip-anytorch==2.6.0
+pytorch-lightning==1.5.0
+open-clip-torch==2.24.0
+opencv-python-headless
+huggingface-hub==0.25.2
+

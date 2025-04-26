@@ -1,0 +1,62 @@
+
+output_dir: "EXP"
+pretrained_model_path: "runwayml/stable-diffusion-v1-5"
+
+unet_additional_kwargs:
+#  use_motion_module              : true
+#  motion_module_resolutions      : [ 1,2,4,8 ]
+#  unet_use_cross_frame_attention : false
+  unet_use_temporal_attention    : true
+#
+#  motion_module_type: Vanilla
+#  motion_module_kwargs:
+#    num_attention_heads                : 8
+#    num_transformer_block              : 1
+#    attention_block_types              : [ "Temporal_Self", "Temporal_Self" ]
+#    temporal_position_encoding         : true
+#    temporal_position_encoding_max_len : 24
+#    temporal_attention_dim_div         : 1
+#    zero_initialize                    : true
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  beta_schedule:       "linear"
+  steps_offset:        1
+  clip_sample:         false
+
+train_data:
+  n_sample_frames: 6
+  width: 224
+  height: 224
+  sample_start_idx: 0
+  sample_frame_rate: 2
+
+val_config:
+  video_length: 6
+  width: 224
+  height: 224
+  num_inference_steps: 50
+  guidance_scale: 12.5
+  use_inv_latent: False
+  num_inv_steps: 50
+
+num_train_epochs: 50
+#brain_model_train_epoch: 30
+#gradient_accumulation_steps: 1
+learning_rate: 1e-4
+lr_scheduler: "polynomial"
+lr_warmup_steps: 500
+train_batch_size: 1
+
+checkpointing_steps: 1000
+trainable_modules:
+  - "attn1.to_q"
+  - "attn2.to_q"
+  - "attn_temp"
+
+seed: 33
+mixed_precision: fp16
+use_8bit_adam: False
+gradient_checkpointing: False
