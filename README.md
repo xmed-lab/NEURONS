@@ -21,7 +21,7 @@
 </div>
 
 
-<span style="font-variant: small-caps;">Neurons</span> is a novel framework that emulates the human visual cortex to achieve high-fidelity and interpretable fMRI-to-video reconstruction. Our biologically-inspired approach significantly advances the state-of-the-art in brain decoding and visual reconstruction.
+<span style="font-variant: small-caps;">Neurons</span> is a novel framework that emulates the human visual cortex to achieve high-fidelity and interpretable fMRI-to-video reconstruction. Our biologically inspired approach significantly advances the state-of-the-art in brain decoding and visual reconstruction.
 
 
 
@@ -31,14 +31,14 @@
 
 <div style="display: flex; align-items: center;">
     <img src="https://img.shields.io/badge/2025%2F04-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Code released</span>
+    <span>Code released!</span>
 </div>
 
 <br>
 
 <div style="display: flex; align-items: center;">
     <img src="https://img.shields.io/badge/2025%2F03-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Project launched with paper available on arXiv</span>
+    <span>Project launched with paper available on arXiv!</span>
 </div>
 
 ## 🛠️ Installation & Setup
