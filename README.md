@@ -28,18 +28,10 @@
 ## 📣 Latest Updates
 
 
+&nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/04 &nbsp;&nbsp; Code released!
 
-<div style="display: flex; align-items: center;">
-    <img src="https://img.shields.io/badge/2025%2F04-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Code released!</span>
-</div>
+&nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/03 &nbsp;&nbsp; Project launched with paper available on arXiv!
 
-<br>
-
-<div style="display: flex; align-items: center;">
-    <img src="https://img.shields.io/badge/2025%2F03-yellow?style=flat-square" alt="Static Badge" style="margin-right: 8px;">
-    <span>Project launched with paper available on arXiv!</span>
-</div>
 
 ## 🛠️ Installation & Setup
 
