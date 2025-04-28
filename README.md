@@ -42,13 +42,13 @@ We recommend using separate environments for training and testing:
 
 ```bash
 # Training environment
-conda create -n train python==3.10
-conda activate train
+conda create -n neurons_train python==3.10
+conda activate neurons_train
 pip install -r requirements.txt
 
 # Testing environment (to avoid package conflicts)
-conda create -n test --clone train
-conda activate test
+conda create -n neurons_test --clone neurons_train
+conda activate neurons_test
 pip install diffusers==0.11.1
 ```
 
