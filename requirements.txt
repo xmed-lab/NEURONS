@@ -12,6 +12,6 @@ dalle2-pytorch==1.15.6
 clip-anytorch==2.6.0
 pytorch-lightning==1.5.0
 open-clip-torch==2.24.0
-opencv-python-headless
+opencv-python
 huggingface-hub==0.25.2
 
