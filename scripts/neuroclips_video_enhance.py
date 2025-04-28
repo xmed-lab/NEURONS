@@ -210,9 +210,9 @@ def main(args):
     test_dls = [test_dl]
 
     # set xformers
-    # if is_xformers_available() and (not args.without_xformers):
-    #     unet.enable_xformers_memory_efficient_attention()
-    #     if controlnet is not None: controlnet.enable_xformers_memory_efficient_attention()
+    if is_xformers_available() and (not args.without_xformers):
+        unet.enable_xformers_memory_efficient_attention()
+        if controlnet is not None: controlnet.enable_xformers_memory_efficient_attention()
 
     pipeline = NeuroclipsPipeline(
         vae=vae, text_encoder=text_encoder, tokenizer=tokenizer, unet=unet,
