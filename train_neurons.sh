@@ -2,7 +2,6 @@
 eval "$(conda shell.bash hook)"
 export MASTER_PORT=$((RANDOM % 64512 + 1024))
 export CUDA_VISIBLE_DEVICES=$1
-export SSL_CERT_FILE=./cacert.pem
 num_gpus=$(echo $CUDA_VISIBLE_DEVICES | tr -cd ',' | wc -c)
 num_gpus=$((num_gpus + 1))
 export PYTHONPATH=$(pwd)/:$PYTHONPATH
@@ -31,6 +30,9 @@ if [ ! -d "./${EXP_ROOT_DIR}/exp_${exp}/subj_$subj" ]; then
 fi
 
 timestamp=$(date +"%H:%M_%Y-%m-%d")
+
+
+conda activate neurons_train
 
 
 if [[ "$stage" == *"1"* ]];
@@ -85,7 +87,7 @@ fi
 
 if [[ "$stage" == *"5"* ]];
   then
-    conda activate test
+    conda activate neurons_test
     if [[ "$mode" == *"enhance"* ]]; then
       accelerate launch --main_process_port $MASTER_PORT \
           scripts/neuroclips_video_enhance.py --exp ./${EXP_ROOT_DIR}/exp_${exp}/subj_$subj --mode $mode --subj $subj  | tee ./${EXP_ROOT_DIR}/exp_${exp}/subj_$subj/video_enhance_log_$timestamp.txt
@@ -93,7 +95,6 @@ if [[ "$stage" == *"5"* ]];
       accelerate launch --main_process_port $MASTER_PORT \
           scripts/neuroclips_video.py --exp ./${EXP_ROOT_DIR}/exp_${exp}/subj_$subj --mode $mode --subj $subj  | tee ./${EXP_ROOT_DIR}/exp_${exp}/subj_$subj/video_log_$timestamp.txt
     fi
-    conda deactivate
 fi
 
 if [[ "$stage" == *"6"* ]];
