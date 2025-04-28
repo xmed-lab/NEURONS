@@ -84,7 +84,7 @@ cd pretrained_weights
 wget -O unclip6_epoch0_step110000.ckpt -c https://huggingface.co/datasets/pscotti/mindeyev2/resolve/main/unclip6_epoch0_step110000.ckpt\?download\=true
 wget -O last.pth -c https://huggingface.co/datasets/pscotti/mindeyev2/resolve/main/train_logs/final_subj01_pretrained_40sess_24bs/last.pth\?download\=true
 wget -O convnext_xlarge_alpha0.75_fullckpt.ckpt -c https://huggingface.co/datasets/pscotti/mindeyev2/resolve/main/convnext_xlarge_alpha0.75_fullckpt.pth\?download\=true
-wget -O sd_image_var_autoenc.pth https://huggingface.co/datasets/pscotti/mindeyev2/resolve/main/sd_image_var_autoenc.pth?download=true
+wget -O sd_image_var_autoenc.pth https://huggingface.co/datasets/pscotti/mindeyev2/resolve/main/sd_image_var_autoenc.pth\?download\=true
 ```
 
 
