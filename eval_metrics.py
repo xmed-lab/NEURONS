@@ -286,53 +286,9 @@ def remove_overlap(
                 gt_list.append(gt)
     return np.stack(pred_list), np.stack(gt_list)
 
-from torchvision import transforms
-import clip
-def compute_clip_pcc(pred_videos: np.array, cache_dir: str = '.cache', device: Optional[str] = 'cuda'):
-    """
-    Compute the CLIP-pcc metric for predicted videos.
-
-    Args:
-        pred_videos (np.array): Predicted videos as a numpy array of shape (N, F, 256, 256, 3) in pixel values: 0 ~ 255.
-        cache_dir (str): Directory to cache the CLIP model and processor.
-        device (str): Device to run the model on ('cuda' or 'cpu').
-
-    Returns:
-        float: The average cosine similarity between all pairs of adjacent video frames.
-    """
-
-    model = CLIPVisionModelWithProjection.from_pretrained("openai/clip-vit-base-patch32",
-                                                                    cache_dir=cache_dir).to(device, torch.float16)
-    processor = AutoProcessor.from_pretrained("openai/clip-vit-base-patch32", cache_dir=cache_dir)
-
-    model.eval()
-
-    cosine_similarities = []
-
-    for pred_video in pred_videos: # video shape: (F, 256, 256, 3)
-        frame_embeddings = []
-        for frame in pred_video:  # frame shape: (256, 256, 3)
-            # Preprocess the frame
-            inputs = processor(images=frame, return_tensors="pt")['pixel_values'].to(device, torch.float16)
-
-            with torch.no_grad():
-                frame_embedding = model(inputs).image_embeds.float()
-            frame_embeddings.append(frame_embedding)
-
-        # Compute cosine similarity between adjacent frames
-        for i in range(len(frame_embeddings) - 1):
-            # print(f"\033[92m {frame_embeddings[0].shape} \033[0m")
-            sim = F.cosine_similarity(frame_embeddings[i], frame_embeddings[i + 1], dim=-1).item()
-            cosine_similarities.append(sim)
-
-    # Compute the average cosine similarity
-    avg_cosine_similarity = np.mean(cosine_similarities)
-    std_cosine_similarity = np.std(cosine_similarities)
-    return avg_cosine_similarity, std_cosine_similarity
 
 
 from transformers import AutoProcessor, CLIPModel, AutoModel
-
 
 
 def clip_score_frame(pred_videos, device: Optional[str] = 'cuda'):
