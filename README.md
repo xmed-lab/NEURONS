@@ -16,6 +16,7 @@
 <div align="center">
 
 ![model](assets/framework.png)
+
 *Architecture of the <span style="font-variant: small-caps;">Neurons</span> framework*
 
 </div>
