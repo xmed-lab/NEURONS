@@ -1,8 +1,6 @@
 import os, sys
 import numpy as np
-from eval_metrics import (clip_score_only,
-                          compute_clip_pcc,
-                          clip_score_frame,
+from eval_metrics import (clip_score_frame,
                           ssim_score_only,
                           psnr_score_only,
                           img_classify_metric,
@@ -54,8 +52,7 @@ def main(
     top_k = 1
     # video classification scores
 
-    clip_pcc_mean, clip_pcc_std = compute_clip_pcc(pred_list)
-    clip_pcc_mean_new, clip_pcc_std_new = clip_score_frame(pred_list)
+    clip_pcc_mean, clip_pcc_std = clip_score_frame(pred_list)
 
     acc_list_2way_v, std_list_2way_v = video_classify_metric(
                                         pred_list,
@@ -87,7 +84,6 @@ def main(
 
     print(f"\033[92m \t-------- ST-level -------- \033[0m")
     print(f'\033[92m \t\t CLIP-pcc: {clip_pcc_mean} ± {clip_pcc_std} \033[0m')
-    print(f'\033[92m \t\t CLIP-pcc new: {clip_pcc_mean_new} ± {clip_pcc_std_new} \033[0m')
 
 
 
