@@ -15,4 +15,6 @@ open-clip-torch==2.24.0
 opencv-python
 huggingface-hub==0.25.2
 xformers==0.0.22.post7
+scikit-learn
+scikit-image
 
