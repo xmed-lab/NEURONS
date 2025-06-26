@@ -1,4 +1,4 @@
-# <span style="font-variant: small-caps;">Neurons</span>: Emulating the Human Visual Cortex Improves Fidelity and Interpretability in fMRI-to-Video Reconstruction
+# **[ICCV 2025]** <span style="font-variant: small-caps;">Neurons</span>: Emulating the Human Visual Cortex Improves Fidelity and Interpretability in fMRI-to-Video Reconstruction
 
 <div align="center">
 
