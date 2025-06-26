@@ -28,6 +28,7 @@
 
 ## 📣 Latest Updates
 
+&nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/06 &nbsp;&nbsp; **_Neurons_** is accepted by ICCV-2025!
 
 &nbsp;&nbsp;&nbsp;&nbsp; 🟡 2025/04 &nbsp;&nbsp; Code released!
 
