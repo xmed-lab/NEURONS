@@ -59,7 +59,7 @@ pip install diffusers==0.11.1
 ### 📊 Data Preparation
 
 
-1. Download the pre-processed dataset from [NeuroClips](https://github.com/gongzix/NeuroClips):
+1. Download the pre-processed dataset:
 
 ```bash
 python download_dataset.py
