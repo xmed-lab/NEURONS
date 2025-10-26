@@ -83,10 +83,11 @@ def prepare_data(args):
 
     train_images = torch.load(f'{args.root_dir}/GT_train_3fps.pt', map_location='cpu')
     test_images = torch.load(f'{args.root_dir}/GT_test_3fps.pt', map_location='cpu')
-    train_text = torch.load(f'{args.root_dir}/qwen_annotation/GT_train_caption_qwen.pt', map_location='cpu')
-    train_text_emb = torch.load(f'{args.root_dir}/qwen_annotation/GT_train_caption_qwen_emb.pt', map_location='cpu')
-    test_text = torch.load(f'{args.root_dir}/qwen_annotation/GT_test_caption_qwen.pt', map_location='cpu')
-    test_text_emb = torch.load(f'{args.root_dir}/qwen_annotation/GT_test_caption_qwen_emb.pt', map_location='cpu')
+    train_text = torch.load(f'{args.root_dir}/GT_train_caption.pt', map_location='cpu')
+    train_text_emb = torch.load(f'{args.root_dir}/GT_train_caption_emb.pt', map_location='cpu')
+    test_text = torch.load(f'{args.root_dir}/GT_test_caption.pt', map_location='cpu')
+    test_text_emb = torch.load(f'{args.root_dir}/GT_test_caption_emb.pt', map_location='cpu')
+
 
 
     print("Loaded all crucial train voxels to cpu!", voxel_train.shape)
