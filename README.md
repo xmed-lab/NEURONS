@@ -106,14 +106,14 @@ Parameters:
 
 `$2`: train file postfix, e.g, `train_neurons`
 
+`$3`: run which stage: `123456` for the whole process, `3456` for test & eval only
+
 - `1`: train brain model
 - `2`: train decoupler
 - `3`: recon decoupled outputs, prepare for video reconstruction
 - `4`: (Optional) caption the keyframes with BLIP-2 instead of using the outputs of GPT-2 in Neurons
 - `5`: video reconstruction
 - `6`: evaluation with all metrics
-
-`$3`: run which stage: `123456` for the whole process, `3456` for test & eval only
 
 `$4`: inference mode: `['enhance', 'motion']`
 
