@@ -153,7 +153,7 @@ def prepare_brain_model(args):
 
     # setup diffusion prior network
     out_dim = clip_emb_dim
-    depth = args.n_frames
+    depth = 6
     dim_head = 52
     heads = clip_emb_dim // 52  # heads * dim_head = clip_emb_dim
     timesteps = 100
