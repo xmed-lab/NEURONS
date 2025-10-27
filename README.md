@@ -28,7 +28,7 @@
 
 ## 📣 Latest Updates
 
-🟡 2025/10 &nbsp;&nbsp; Released **model weights, training logs, testing logs, and generated images and videos** — all available at [Hugging Face](https://huggingface.co/McGregorW/NEURONS/tree/main/EXP)! ⚠️ *Note:* Cloning the entire `EXP` folder requires **over 60 GB** of storage. To download selectively, use `snapshot_download` with the `allow_patterns` parameter (e.g., `allow_patterns=["EXP/exp_neurons/subj_1/*"]` to download only subject 1).
+🟡 2025/10 &nbsp;&nbsp; Released **model weights, training logs, testing logs, and generated images and videos** — all available at [Hugging Face](https://huggingface.co/McGregorW/NEURONS/tree/main/EXP)! ⚠️ *Note 1:* Cloning the entire `EXP` folder requires **over 60 GB** of storage. To download selectively, use `snapshot_download` with the `allow_patterns` parameter (e.g., `allow_patterns=["EXP/exp_neurons/subj_1/*"]` to download only subject 1). ⚠️ *Note 2:* Due to a server issue, the original weights were lost. We re-cloned the repository and re-ran the experiments. While specific numerical results may vary slightly, the overall performance remains consistent with the paper, which also verifies the reproducibility of this work.
 
 
 🟡 2025/06 &nbsp;&nbsp; **_Neurons_** is accepted by ICCV-2025!
