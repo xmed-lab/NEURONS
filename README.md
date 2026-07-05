@@ -135,10 +135,11 @@ If you would like to use wandb, first run `wandb login` and set the `use_wandb` 
 If you find this project useful, please consider citing:
 
 ```bibtex
-@article{wang2025neurons,
-  title={NEURONS: Emulating the Human Visual Cortex Improves Fidelity and Interpretability in fMRI-to-Video Reconstruction},
+@inproceedings{wang2025neurons,
+  title={Neurons: Emulating the human visual cortex improves fidelity and interpretability in fmri-to-video reconstruction},
   author={Wang, Haonan and Zhang, Qixiang and Wang, Lehan and Huang, Xuanqi and Li, Xiaomeng},
-  journal={arXiv preprint arXiv:2503.11167},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={18367--18376},
   year={2025}
 }
 ```
